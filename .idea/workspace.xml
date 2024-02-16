@@ -12,6 +12,7 @@
       <change afterPath="$PROJECT_DIR$/bootcampProject/src/main/java/com/tobeto/bootcampProject/webapi/ApplicantController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bootcampProject/src/main/java/com/tobeto/bootcampProject/webapi/EmployeesController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bootcampProject/src/main/java/com/tobeto/bootcampProject/webapi/InstructorsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootcampProject/src/main/java/com/tobeto/bootcampProject/webapi/UsersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
