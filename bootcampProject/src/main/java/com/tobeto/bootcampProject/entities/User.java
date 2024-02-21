@@ -1,34 +1,40 @@
 package com.tobeto.bootcampProject.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.tobeto.bootcampProject.core.BaseEntity;
+import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Setter
-@RequiredArgsConstructor
 @AllArgsConstructor
-public class User {
+@NoArgsConstructor
+@Table(name = "users")
+@Inheritance(strategy = InheritanceType.JOINED)
+public class User extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.PRIVATE)
-    private Long id;
+    private int id;
 
-    private String userName;
+    @Column(name = "username")
+    private String username;
 
+    @Column(name = "firstName")
     private String firstName;
+
+    @Column(name = "lastName")
     private String lastName;
 
-    private LocalDateTime dateOfBirth;
+    @Column(name = "dateOfBirth")
+    private String dateOfBirth;
 
+    @Column(name = "nationalIdentity")
     private String nationalIdentity;
 
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
 }
