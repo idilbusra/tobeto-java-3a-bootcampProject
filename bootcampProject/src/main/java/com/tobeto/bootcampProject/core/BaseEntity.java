@@ -1,23 +1,26 @@
 package com.tobeto.bootcampProject.core;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
-@MappedSuperclass
-@Getter
-@Setter
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
-@RequiredArgsConstructor
-
-public abstract class BaseEntity {
-
+@NoArgsConstructor
+@Data
+@MappedSuperclass
+public class BaseEntity<T> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "id")
+    private T id;
+
+    @Column(name="createdDate")
+    private LocalDateTime createdDate;
+
+    @Column(name="updatedDate")
+    private LocalDateTime updatedDate;
+
+    @Column(name="deletedDate")
+    private LocalDateTime deletedDate;
 }
