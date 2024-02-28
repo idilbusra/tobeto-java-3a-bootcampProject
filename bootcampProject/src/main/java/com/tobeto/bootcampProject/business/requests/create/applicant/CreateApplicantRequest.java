@@ -1,4 +1,4 @@
-package com.tobeto.bootcampProject.business.dto.requests;
+package com.tobeto.bootcampproject.business.requests.create.applicant;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,6 +8,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateApplicantRequest {
-    private int id;
-    private String about;
+    private String firstName;
 }

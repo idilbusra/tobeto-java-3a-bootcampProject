@@ -1,26 +1,29 @@
-package com.tobeto.bootcampProject.core;
+package com.tobeto.bootcampproject.core.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @MappedSuperclass
+
 public class BaseEntity<T> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "ID")
     private T id;
 
-    @Column(name="createdDate")
+    @Column(name = "CREATED_DATE")
     private LocalDateTime createdDate;
 
-    @Column(name="updatedDate")
+    @Column(name = "UPDATED_DATE")
     private LocalDateTime updatedDate;
 
-    @Column(name="deletedDate")
+    @Column(name = "DELETED_DATE")
     private LocalDateTime deletedDate;
 }

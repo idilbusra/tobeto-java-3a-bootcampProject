@@ -1,10 +1,10 @@
-package com.tobeto.bootcampProject;
+package com.tobeto.bootcampproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BootcampProjectApplicationTests {
+class BootcampprojectApplicationTests {
 
 	@Test
 	void contextLoads() {

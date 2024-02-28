@@ -1,4 +1,6 @@
-package com.tobeto.bootcampProject.core.utilities;
+package com.tobeto.bootcampproject.core.modelmapper;
+
+import org.modelmapper.ModelMapper;
 
 public interface ModelMapperService {
     ModelMapper forRequest();

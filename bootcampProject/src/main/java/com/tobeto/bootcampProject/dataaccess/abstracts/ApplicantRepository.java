@@ -1,8 +1,8 @@
-package com.tobeto.bootcampProject.dataaccess.abstracts;
+package com.tobeto.bootcampproject.dataaccess.abstracts;
 
-import com.tobeto.bootcampProject.entities.Applicant;
+import com.tobeto.bootcampproject.entities.concretes.Applicant;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ApplicantRepository extends JpaRepository<Applicant, Long> {
-    Applicant getById(int id);
+public interface ApplicantRepository extends JpaRepository<Applicant,Integer> {
+
 }

@@ -1,13 +1,8 @@
-package com.tobeto.bootcampProject.business.abstracts;
+package com.tobeto.bootcampproject.business.abstracts;
 
-
-import com.tobeto.bootcampProject.business.dto.requests.CreateApplicantRequest;
-import com.tobeto.bootcampProject.business.dto.responses.GetApplicantResponse;
+import com.tobeto.bootcampproject.business.requests.create.applicant.CreateApplicantRequest;
+import com.tobeto.bootcampproject.business.responses.create.applicant.CreateApplicantResponse;
 
 public interface ApplicantService {
-    CreateApplicantRequest add(CreateApplicantRequest request);
-    void delete(int id);
-    void update(CreateApplicantRequest request);
-
-    GetApplicantResponse getById(int id);
+   CreateApplicantResponse create(CreateApplicantRequest createApplicantRequest);
 }
